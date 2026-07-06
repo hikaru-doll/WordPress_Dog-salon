@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #121212;
+  font-family: "Noto Serif JP", serif;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  color: #121212;
+}
+a:hover {
+  opacity: 0.8;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,181 @@
+@charset "utf";
+/* -------------
+front-page.php
+------------- */
+.hero {
+  margin-bottom: var(--space-l);
+}
+.about {
+  text-align: center;
+  .text {
+    line-height: 2;
+  }
+}
+.flow {
+  .number {
+    font-size: 3rem;
+    color: burlywood;
+    font-style: italic;
+    margin-right: 10px;
+  }
+  .item {
+    margin-bottom: var(--space-m);
+  }
+  .image img {
+    width: 100%;
+    height: 250px;
+  }
+  .chair img {
+    object-position: 50% 90%;
+  }
+}
+.policy-link {
+  color: blue;
+  text-decoration: underline;
+}
+.reservation {
+  text-align: center;
+}
+/* --------------------
+page-menu.php
+-------------------- */
+#page-menu {
+  & table tr:nth-child(odd) {
+    background-color: var(--color-bg);
+  }
+  & table tr:first-child {
+    background-color: var(--color-table);
+  }
+  & table {
+    text-align: center;
+    margin-bottom: var(--space-l);
+    width: 100%;
+  }
+  & tr {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: center;
+  }
+
+  & td {
+    line-height: 2.5;
+    border-left: 2px solid #fff;
+  }
+  .reference {
+    border: 4px dotted var(--color-bg);
+    padding: var(--space-xs);
+  }
+}
+/* ---------------------
+page-reservation.php
+--------------------- */
+#page-calendar {
+  .order-list {
+    justify-content: center;
+    gap: var(--space-m);
+    & li {
+      background-color: var(--color-orange);
+      padding: var(--space-xs);
+      color: #fff;
+      position: relative;
+    }
+  }
+  & li::after {
+    content: "▼";
+    position: absolute;
+    bottom: -28px;
+    left: 47%;
+    color: #8d3030;
+  }
+  & li:last-child::after {
+    display: none;
+  }
+  .plugin {
+    padding: var(--space-l) 0;
+  }
+}
+/* Booking Package */
+#booking_package_input_firstname,
+#booking_package_input_lastname,
+#booking_package_input_email,
+#booking_package_input_phone,
+#booking_package_input_address,
+#booking_package_input_another {
+  font-size: 16px !important;
+  padding: 12px 10px !important;
+  height: auto !important;
+}
+#paymentPanel button,
+#nextAndReturnPanel button {
+  width: 200px !important;
+  background-color: var(--color-orange) !important;
+  padding: 8px !important;
+}
+/* -----------------------
+page-staff.php
+------------------------ */
+#page-staff {
+  .list {
+    margin-bottom: var(--space-l);
+  }
+  .item {
+    text-align: center;
+    margin-bottom: var(--space-l);
+  }
+  .image img {
+    aspect-ratio: 1/1;
+    width: 250px;
+    border-radius: 50%;
+  }
+  .staff-name {
+    margin-bottom: var(--space-s);
+  }
+  .text {
+    text-align: left;
+    padding: 0 var(--space-s);
+  }
+}
+/* -----------
+404.php
+-------------- */
+#page-404 {
+  text-align: center;
+  .dog-icon img {
+    width: 100px;
+    animation: dog 3s forwards ease-in;
+  }
+  .text {
+    margin-bottom: var(--space-l);
+  }
+}
+@keyframes dog {
+  0% {
+    transform: translateX(500%);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  95% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* --------------
+page.php
+--------------- */
+.page-id-19 {
+  background-image: url("../imgs/bg4.png");
+  background-repeat: repeat-y;
+  background-position: right;
+  .section-title {
+    margin-bottom: var(--space-l);
+  }
+  & h2 {
+    margin: var(--space-m) 0 var(--space-xs) 0;
+  }
+  & p {
+    margin-bottom: var(--space-xs);
+  }
+}

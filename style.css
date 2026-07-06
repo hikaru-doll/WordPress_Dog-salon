@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* -----------------
+共通スタイル
+------------------ */
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.button {
+  margin: var(--space-s);
+  a {
+    display: inline-block;
+    background-color: orangered;
+    border: 2px solid orangered;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    transition: 0.3s;
+  }
+}
+.button a:hover {
+  background-color: #fff;
+  color: orangered;
+}
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-s) var(--space-xxs);
+}
+.bg {
+  background-color: var(--color-bg);
+}
+.section-title,
+.page-title {
+  font-size: var(--title-h1);
+  margin-bottom: var(--space-m);
+  text-align: center;
+  position: relative;
+}
+.section-title::after,
+.page-title::after {
+  content: "";
+  width: 3rem;
+  height: 3px;
+  background-color: var(--color-black);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.page-title {
+  margin-bottom: var(--space-l);
+}
+.page-title::after {
+  bottom: -10px;
+}
+.item-title {
+  font-size: var(--title-h2);
+}
+.logo {
+  width: 70px;
+  height: 60px;
+  & a {
+    display: inline-block;
+  }
+}
+/* -------------------
+header.php 
+---------------------*/
+.ham {
+  display: block;
+  border: none;
+  width: 31px;
+  height: 31px;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 30;
+  cursor: pointer;
+  background-color: transparent;
+}
+.ham span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  right: 0;
+}
+.ham1 {
+  top: calc(50% - 10% / 2 - 25%);
+  transition: 0.2s;
+  background-color: var(--color-black);
+}
+.ham2 {
+  top: calc(50% - 10% / 2);
+  background-color: var(--color-black);
+}
+.ham3 {
+  top: calc(50% - 10% / 2 + 25%);
+  transition: 0.5s;
+  background-color: var(--color-black);
+}
+.open .ham1 {
+  top: calc(50% - 10% / 2);
+  transform: rotate(135deg);
+}
+.open .ham2 {
+  opacity: 0;
+}
+.open .ham3 {
+  top: calc(50% - 10% / 2);
+  transform: rotate(-135deg);
+}
+.main-navigation {
+  display: none;
+  position: fixed;
+  background-color: var(--color-bg);
+  width: 100%;
+  height: 100vh;
+  padding-top: var(--space-l);
+  top: 0;
+  left: 0;
+  transition: 1s;
+  z-index: 10;
+  & li {
+    line-height: 2;
+    text-align: center;
+  }
+  & a {
+    font-size: 1.3rem;
+    padding: 0.2rem 1rem;
+    color: var(--color-black);
+  }
+}
+.open .main-navigation {
+  display: block;
+}
+.header {
+  padding: var(--space-xxs) var(--space-xs);
+  gap: var(--space-xs);
+}
+.information .flex {
+  flex-direction: column;
+}
+.home.blog {
+  .breadcrumb {
+    display: none;
+  }
+}
+/* heroアニメーション */
+.anime {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  z-index: 0;
+}
+.anime li {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  animation: fades 15s infinite;
+}
+.anime li:nth-child(1) {
+  animation-delay: 0s;
+}
+.anime li:nth-child(2) {
+  animation-delay: 5s;
+}
+.anime li:nth-child(3) {
+  animation-delay: 10s;
+}
+.anime img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+@keyframes fades {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.anime li::after {
+  content: "";
+  box-shadow: inset 0 0 20px 20px #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.anime::before {
+  content: "SUPICA";
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  top: 20%;
+  left: 10%;
+  font-size: clamp(3rem, 0.2rem + 6.4vw, 5rem);
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #6b5959;
+  letter-spacing: 2px;
+}
+.anime::after {
+  content: "Dog Salon";
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  top: 17%;
+  left: 10%;
+}
+/* -------------------
+footer.php
+---------------------*/
+.footer {
+  .logo {
+    margin-bottom: var(--space-s);
+  }
+  .footer-navigation {
+    margin-bottom: var(--space-s);
+    line-height: 1.7;
+  }
+  #access > p {
+    font-weight: bold;
+    font-size: var(--title-h2);
+    margin-bottom: var(--space-xxs);
+  }
+  .map {
+    margin-bottom: var(--space-xxs);
+  }
+  & dl {
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: var(--space-m);
+  }
+  .copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+}

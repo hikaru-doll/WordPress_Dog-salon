@@ -1,0 +1,103 @@
+@charset "utf-8";
+@media screen and (min-width: 700px) {
+  .blank {
+    display: none;
+  }
+  .information .flex {
+    flex-direction: row;
+  }
+  /* ----------------
+  front-page.php
+  ----------------- */
+  #front-page {
+    .flow {
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .text,
+      .image {
+        width: 45%;
+        & img {
+          height: 300px;
+        }
+      }
+      .container li:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  /* ----------------
+  footer.php
+  ---------------- */
+  .footer {
+    .wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  /* -----------------
+  page-menu.php
+  ----------------- */
+  #page-menu {
+    & table tr:first-child th {
+      line-height: 2.8;
+    }
+  }
+  /* -----------------
+  page-staff.php
+  ------------------ */
+  #page-staff {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@media screen and (min-width: 1100px) {
+  /* -----------------
+  header.php
+  ------------------ */
+  .ham {
+    display: none;
+  }
+  .main-navigation {
+    display: block;
+    position: static;
+    background-color: transparent;
+    width: 80%;
+    height: 60px;
+    padding: 0;
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: right;
+    margin-right: var(--space-m);
+  }
+  .information {
+    width: 350px;
+  }
+  .header {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* -----------------
+  page-reservation.php
+  ----------------- */
+  #page-calendar {
+    .order-list.grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    & li::after {
+      content: "▶";
+      bottom: 30px;
+      left: 195px;
+    }
+    & li {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
