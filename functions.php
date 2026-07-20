@@ -2,7 +2,7 @@
 defined('ABSPATH') || exit;
 ?>
 <?php
-function my_enqueue_styles()
+function dogsalon_assets_enqueue_styles()
 {
 
   $uri = get_theme_file_uri();
@@ -49,7 +49,7 @@ function my_enqueue_styles()
     true
   );
 }
-add_action('wp_enqueue_scripts', 'my_enqueue_styles');
+add_action('wp_enqueue_scripts', 'dogsalon_assets_enqueue_styles');
 
 
 
