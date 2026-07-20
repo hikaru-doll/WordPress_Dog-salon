@@ -4,7 +4,7 @@ defined('ABSPATH') || exit;
 <?php
 function dogsalon_assets_enqueue_styles()
 {
-
+  // ファイルの読み込み
   $uri = get_theme_file_uri();
 
   wp_enqueue_style(
@@ -51,14 +51,14 @@ function dogsalon_assets_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'dogsalon_assets_enqueue_styles');
 
-
-
-// サムネイルを使用
-add_theme_support('post-thumbnails');
-
 // 管理画面のサイドメニューから「コメント」を非表示にする
 function remove_menus()
 {
-  remove_menu_page('edit-comments.php'); // コメント
+  remove_menu_page('edit-comments.php');
 }
 add_action('admin_menu', 'remove_menus', 999);
+
+// タイトルタグを出力
+add_action('after_setup_theme', function () {
+  add_theme_support('title-tag');
+});
