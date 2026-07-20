@@ -9,7 +9,7 @@
   /* ----------------
   front-page.php
   ----------------- */
-  #front-page {
+  .front-page {
     .flow {
       .item {
         display: flex;
@@ -40,7 +40,7 @@
   /* -----------------
   page-menu.php
   ----------------- */
-  #page-menu {
+  .page-menu {
     & table tr:first-child th {
       line-height: 2.8;
     }
@@ -48,7 +48,7 @@
   /* -----------------
   page-staff.php
   ------------------ */
-  #page-staff {
+  .page-staff {
     .grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -85,7 +85,7 @@
   /* -----------------
   page-reservation.php
   ----------------- */
-  #page-calendar {
+  .page-reservation {
     .order-list.grid {
       grid-template-columns: repeat(5, 1fr);
     }
