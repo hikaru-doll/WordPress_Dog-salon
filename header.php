@@ -20,12 +20,12 @@ defined('ABSPATH') || exit;
         <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="ロゴマーク" />
       </a>
     </h1>
-    <button class="ham">
+    <button class="ham" aria-label="メニューを開く" aria-expanded="false" aria-controls="main-navigation">
       <span class="ham1"></span>
       <span class="ham2"></span>
       <span class="ham3"></span>
     </button>
-    <nav class="main-navigation">
+    <nav id="main-navigation" class="main-navigation">
       <ul class="nav-menu">
         <li><a href="<?php echo esc_url(home_url()); ?>">Top</a></li>
         <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('menu'))); ?>">メニュー</a></li>
