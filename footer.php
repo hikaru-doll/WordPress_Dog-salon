@@ -40,7 +40,7 @@ defined('ABSPATH') || exit;
       </dl>
     </div>
   </div>
-  <p class="copyright">&copy;2026 Dog Salon SUPICA</p>
+  <p class="copyright">&copy;<span id="year"></span> Dog Salon SUPICA</p>
 </footer>
 <?php wp_footer(); ?>
 <!-- /footer end ----------------------------------------------->
