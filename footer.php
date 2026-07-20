@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
       </div>
       <dl class="grid">
         <dt>所在地</dt>
-        <dd>〒000-000　兵庫県宝塚市○○町0-0-0</dd>
+        <dd>〒000-000　兵庫県宝塚市子犬町0-0-0</dd>
         <dt>電話番号</dt>
         <dd>090-0000-0000</dd>
         <dt>定休日</dt>
