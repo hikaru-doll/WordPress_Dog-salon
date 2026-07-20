@@ -12,7 +12,8 @@ get_header();
 <!-- main start ---------------------------------------------->
 <main id="page-staff" class="main">
   <div class="wrapper">
-
+    <?php
+    $theme_uri = esc_url(get_theme_file_uri()); ?>
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
         <h1 class="page-title"><?php the_title(); ?></h1>
 
@@ -20,7 +21,7 @@ get_header();
         <ul class="list grid">
           <li class="item">
             <div class="image">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/staff1.webp" alt="ジョン" />
+              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff1.webp" alt="ジョン" />
             </div>
             <h2 class="staff-name">Jhon</h2>
             <p class="text">
@@ -30,7 +31,7 @@ get_header();
           </li>
           <li class="item">
             <div class="image">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/staff2.webp" alt="リサ" />
+              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff2.webp" alt="リサ" />
             </div>
             <h2 class="staff-name">Lisa</h2>
             <p class="text">
@@ -39,7 +40,7 @@ get_header();
           </li>
           <li class="item">
             <div class="image">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/staff3.webp" alt="エマ" />
+              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff3.webp" alt="エマ" />
             </div>
             <h2 class="staff-name">Emma</h2>
             <p class="text">
@@ -48,7 +49,7 @@ get_header();
           </li>
           <li class="item">
             <div class="image">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/staff4.webp" alt="マイケル" />
+              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff4.webp" alt="マイケル" />
             </div>
             <h2 class="staff-name">Michael</h2>
             <p class="text">
