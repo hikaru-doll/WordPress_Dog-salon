@@ -5,7 +5,7 @@ defined('ABSPATH') || exit;
 <footer class="footer bg">
   <div class="wrapper">
     <div class="logo">
-      <a href="<?php echo esc_url(home_url()); ?> "> <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="" /></a>
+      <a href="<?php echo esc_url(home_url()); ?> "> <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Dog Salon Supica" /></a>
     </div>
     <nav class="footer-navigation">
       <ul class="footer-menu">
