@@ -15,11 +15,19 @@ defined('ABSPATH') || exit;
   <?php wp_body_open(); ?>
   <!-- header start -------------------------------------------->
   <header class="header flex">
-    <h1 class="logo">
-      <a href="<?php echo esc_url(home_url()); ?> ">
-        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Don Salon Supica" />
-      </a>
-    </h1>
+    <?php if (is_front_page()): ?>
+      <h1 class="logo">
+        <a href="<?php echo esc_url(home_url()); ?> ">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Don Salon Supica" />
+        </a>
+      </h1>
+    <?php else: ?>
+      <p class="logo">
+        <a href="<?php echo esc_url(home_url()); ?> ">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Don Salon Supica" />
+        </a>
+      </p>
+    <?php endif; ?>
     <button class="ham" aria-label="メニューを開く" aria-expanded="false" aria-controls="main-navigation">
       <span class="ham1"></span>
       <span class="ham2"></span>
