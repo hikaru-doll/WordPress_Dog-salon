@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
   <header class="header flex">
     <h1 class="logo">
       <a href="<?php echo esc_url(home_url()); ?> ">
-        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="ロゴマーク" />
+        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Don Salon Supica" />
       </a>
     </h1>
     <button class="ham" aria-label="メニューを開く" aria-expanded="false" aria-controls="main-navigation">
