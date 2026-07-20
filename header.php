@@ -18,13 +18,13 @@ defined('ABSPATH') || exit;
     <?php if (is_front_page()): ?>
       <h1 class="logo">
         <a href="<?php echo esc_url(home_url()); ?> ">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Don Salon Supica" />
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Dog Salon Supica" />
         </a>
       </h1>
     <?php else: ?>
       <p class="logo">
         <a href="<?php echo esc_url(home_url()); ?> ">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Don Salon Supica" />
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Dog Salon Supica" />
         </a>
       </p>
     <?php endif; ?>
@@ -57,10 +57,10 @@ defined('ABSPATH') || exit;
   <!-- /header end --------------------------------------------->
   <!-- /header end ------------------------------------------------------------------------------------>
   <!-- パンくずリスト -->
-  <div class="breadcrumb wrapper">
+  <nav class="breadcrumb wrapper" aria-label="パンくず">
     <?php
     if (function_exists('bcn_display')) {
       bcn_display();
     }
     ?>
-  </div>
+  </nav>
