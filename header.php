@@ -35,7 +35,8 @@ defined('ABSPATH') || exit;
       </ul>
     </nav>
     <ul class="information">
-      <li>電話：090-0000-0000</li>
+      <li><a href="tel:09000000000">電話：090-0000-0000</a></li>
+      <!-- <li>電話：090-0000-0000</li> -->
       <li>
         <ul class="flex">
           <li>定休日：水曜日</li>
