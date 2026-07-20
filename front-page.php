@@ -5,30 +5,32 @@ defined('ABSPATH') || exit;
 <!-- main start ---------------------------------------------->
 <main id="front-page" class="main">
   <!-- section hero start --------------------->
+  <?php
+  $theme_uri = esc_url(get_theme_file_uri()); ?>
   <section class="hero">
     <ul class="anime">
       <li>
         <picture>
           <source
             media="(max-width:700px)"
-            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/mainvisual4_sp.jpg" />
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/mainvisual4.webp" alt="ゴールデンレトリーバー" />
+            srcset="<?php echo $theme_uri; ?>/assets/imgs/mainvisual4_sp.jpg" />
+          <img src="<?php echo $theme_uri; ?>/assets/imgs/mainvisual4.webp" alt="ゴールデンレトリーバー" />
         </picture>
       </li>
       <li>
         <picture>
           <source
             media="(max-width:700px)"
-            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/mainvisual5_sp.jpg" />
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/mainvisual5.webp" alt="ボーダーコリー" />
+            srcset="<?php echo $theme_uri; ?>/assets/imgs/mainvisual5_sp.jpg" />
+          <img src="<?php echo $theme_uri; ?>/assets/imgs/mainvisual5.webp" alt="ボーダーコリー" />
         </picture>
       </li>
       <li>
         <picture>
           <source
             media="(max-width:700px)"
-            srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/mainvisual04_sp.jpg" />
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/mainvisual6.webp" alt="キャバリア" />
+            srcset="<?php echo $theme_uri; ?>/assets/imgs/mainvisual04_sp.jpg" />
+          <img src="<?php echo $theme_uri; ?>/assets/imgs/mainvisual6.webp" alt="キャバリア" />
         </picture>
       </li>
     </ul>
@@ -61,7 +63,7 @@ defined('ABSPATH') || exit;
             </p>
           </div>
           <div class="image">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/hearing3.jpg" alt="紙と鉛筆" />
+            <img src="<?php echo $theme_uri; ?>/assets/imgs/hearing3.jpg" alt="紙と鉛筆" />
           </div>
         </li>
         <li class="item">
@@ -76,7 +78,7 @@ defined('ABSPATH') || exit;
             </p>
           </div>
           <div class="image">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/shampoo1.jpg" alt="シャンプーの画像" />
+            <img src="<?php echo $theme_uri; ?>/assets/imgs/shampoo1.jpg" alt="シャンプーの画像" />
           </div>
         </li>
         <li class="item">
@@ -91,7 +93,7 @@ defined('ABSPATH') || exit;
             </p>
           </div>
           <div class="image">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/counseling.webp" alt="犬を抱く女性" />
+            <img src="<?php echo $theme_uri; ?>/assets/imgs/counseling.webp" alt="犬を抱く女性" />
           </div>
         </li>
         <li class="item">
@@ -103,7 +105,7 @@ defined('ABSPATH') || exit;
             </p>
           </div>
           <div class="image">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/welcome1.webp" alt="犬を迎える女性" />
+            <img src="<?php echo $theme_uri; ?>/assets/imgs/welcome1.webp" alt="犬を迎える女性" />
           </div>
         </li>
         <li class="item">
@@ -114,7 +116,7 @@ defined('ABSPATH') || exit;
             </p>
           </div>
           <div class="image chair">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/chair2.jpg" alt="イスとテーブル" />
+            <img src="<?php echo $theme_uri; ?>/assets/imgs/chair2.jpg" alt="イスとテーブル" />
           </div>
         </li>
       </ul>
