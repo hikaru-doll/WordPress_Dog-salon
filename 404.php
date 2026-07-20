@@ -2,9 +2,8 @@
 defined('ABSPATH') || exit;
 ?>
 <?php get_header(); ?>
-
 <!-- main start ---------------------------------------------->
-<main id="page-404" class="main">
+<main class="main page-404">
   <div class="wrapper">
     <h1 class="page-title">404 NOT FOUND</h1>
     <p class="text">

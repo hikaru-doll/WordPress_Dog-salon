@@ -4,7 +4,7 @@ defined('ABSPATH') || exit;
 <?php get_header();
 ?>
 <!-- main start ---------------------------------------------->
-<main id="page-calendar" class="main">
+<main class="main page-reservation">
   <div class="wrapper">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
         <h1 class="page-title"><?php the_title(); ?></h1>
@@ -20,7 +20,6 @@ defined('ABSPATH') || exit;
         </div>
   </div>
 <?php endwhile; ?>
-<?php else: ?>
 <?php endif; ?>
 </main>
 <!-- /main end  ---------------------------------------------------->

@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <!-- main start ---------------------------------------------->
-<main id="page-menu" class="main">
+<main class="main page-menu">
   <div class="wrapper">
 
     <h1 class="page-title">メニュー料金表</h1>
