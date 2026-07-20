@@ -39,12 +39,12 @@ defined('ABSPATH') || exit;
   <!-- section about start ------------------------------>
   <section class="about">
     <div class="wrapper">
-      <article class="text">
+      <p class="text">
         Dog Salon
         SUPICAは、ワンちゃんが心からリラックスできる特別な空間を提供することを第一に考えています。<br />
         私たちはワンちゃんと飼い主様の両方にとって、美しさと癒しをお届けいたします。<br />
         どうぞお気軽にお越しください。
-      </article>
+      </p>
     </div>
   </section>
   <!-- /section about end  ------------------------------>
@@ -127,7 +127,6 @@ defined('ABSPATH') || exit;
   <section class="reservation">
     <div class="wrapper">
       <h2 class="section-title">Reservation</h2>
-      <p></p>
       <p>当店では完全予約制となっています。</p>
       <p>
         ご予約の前に、<a href="<?php echo esc_url(get_permalink(get_page_by_path('policy'))); ?>" class="policy-link">ご利用規約</a>をご覧になり、同意の上でご予約ください。
@@ -137,7 +136,7 @@ defined('ABSPATH') || exit;
         分からないことがございましたらお気軽にご連絡ください。
       </p>
       <div class="button">
-        <a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?> ">ご予約カレンダーへ</a>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>">ご予約カレンダーへ</a>
       </div>
     </div>
   </section>
