@@ -36,10 +36,12 @@ defined('ABSPATH') || exit;
     </nav>
     <ul class="information">
       <li>電話：090-0000-0000</li>
-      <div class="flex">
-        <li>定休日：水曜日</li>
-        <li>営業時間：9:00～20:00</li>
-      </div>
+      <li>
+        <ul class="flex">
+          <li>定休日：水曜日</li>
+          <li>営業時間：9:00～20:00</li>
+        </ul>
+      </li>
     </ul>
   </header>
   <!-- /header end --------------------------------------------->
