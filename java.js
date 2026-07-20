@@ -1,29 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ハンバーガーの開閉とタブ操作の制御
   const body = document.body;
   const ham = document.querySelector(".ham");
   const menu = document.querySelector(".main-navigation");
-  ham.addEventListener("click", () => {
-    const isOpen = body.classList.toggle("open");
-    ham.setAttribute("aria-expanded", isOpen);
-    ham.setAttribute(
-      "aria-label",
-      isOpen ? "メニューを閉じる" : "メニューを開く",
-    );
-  });
-  menu.addEventListener("click", () => {
+  function closeMenu() {
     body.classList.remove("open");
     ham.setAttribute("aria-expanded", "false");
     ham.setAttribute("aria-label", "メニューを開く");
-  });
-  let focusTrap = document.getElementById("js-focus-trap");
+    ham.focus();
+  }
+  function openMenu() {
+    body.classList.add("open");
+    ham.setAttribute("aria-expanded", "true");
+    ham.setAttribute("aria-label", "メニューを閉じる");
+  }
+  function toggleMenu() {
+    body.classList.contains("open") ? closeMenu() : openMenu();
+  }
+
+  // ハンバーガーメニューの開閉とaria属性の切り替え
+  ham.addEventListener("click", toggleMenu);
+
+  // 開いたmenuのクリック時でメニューの閉会とaria属性の切り替え
+  menu.addEventListener("click", closeMenu);
+
+  // ESCキーでメニューを閉じる
+  // 視覚上の状態だけでなくaria-expandedも同期する
+  const handleKeydown = (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+    }
+  };
+  document.addEventListener("keydown", handleKeydown);
+
+  // ハンバーガーメニューOPEN時に、フォーカスが外れないようにする
+  const focusTrap = document.getElementById("js-focus-trap");
   focusTrap.addEventListener("focus", (e) => {
     ham.focus();
   });
 
   // コピーライトの西暦を動的に出力する
-  const yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
   }
 });
