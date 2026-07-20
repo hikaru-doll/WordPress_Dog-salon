@@ -32,6 +32,7 @@ defined('ABSPATH') || exit;
         <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>">ご予約</a></li>
         <li><a href="<?php echo esc_url(home_url()); ?>/#access">アクセス</a></li>
         <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('policy'))); ?>">ご利用規約</a></li>
+        <li id="js-focus-trap" tabindex="0"></li>
       </ul>
     </nav>
     <ul class="information">
