@@ -122,10 +122,24 @@ page-staff.php
     text-align: center;
     margin-bottom: var(--space-l);
   }
+
   .image img {
     aspect-ratio: 1/1;
     width: 250px;
     border-radius: 50%;
+    object-position: top;
+  }
+  .jhon {
+    background-color: rgb(255, 228, 110);
+  }
+  .lisa {
+    background-color: rgb(245, 217, 197);
+  }
+  .emma {
+    background-color: rgb(255, 224, 230);
+  }
+  .michael {
+    background-color: rgb(180, 242, 247);
   }
   .staff-name {
     margin-bottom: var(--space-s);
