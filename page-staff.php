@@ -19,7 +19,7 @@ get_header();
         <div class="list grid">
           <article class="item">
             <div class="image">
-              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff1.webp" alt="ジョン" />
+              <img class="jhon" src="<?php echo $theme_uri; ?>/assets/imgs/staff5.webp" alt="ジョン" />
             </div>
             <h2 class="staff-name">Jhon</h2>
             <p class="text">
@@ -27,18 +27,18 @@ get_header();
               彼は犬の美容に情熱を傾け、一匹一匹の犬の個性を尊重しながら、最高のトリミングを提供します。犬との絆を深め、飼い主の皆様にもトリミングが楽しいひとときとなるよう心がけています。
             </p>
           </article>
-          <li class="item">
+          <article class="item">
             <div class="image">
-              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff2.webp" alt="リサ" />
+              <img class="lisa" src="<?php echo $theme_uri; ?>/assets/imgs/staff8.webp" alt="リサ" />
             </div>
             <h2 class="staff-name">Lisa</h2>
             <p class="text">
               Lisaは当サロンの誇るJDA（日本ドッグアート協会）公認トリマーです。<br>
               彼女は犬の美容に対する情熱と技術力を兼ね備えており、犬の美しさを最大限に引き立てるために努力しています。お客様の要望に応じ、犬の個性に合わせたトリミングを提供し、笑顔でお出迎えいたします。 </p>
-          </li>
+          </article>
           <article class="item">
             <div class="image">
-              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff3.webp" alt="エマ" />
+              <img class="emma" src="<?php echo $theme_uri; ?>/assets/imgs/staff7.webp" alt="エマ" />
             </div>
             <h2 class="staff-name">Emma</h2>
             <p class="text">
@@ -47,7 +47,7 @@ get_header();
           </article>
           <article class="item">
             <div class="image">
-              <img src="<?php echo $theme_uri; ?>/assets/imgs/staff4.webp" alt="マイケル" />
+              <img class="michael" src="<?php echo $theme_uri; ?>/assets/imgs/staff6.webp" alt="マイケル" />
             </div>
             <h2 class="staff-name">Michael</h2>
             <p class="text">
