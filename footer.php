@@ -4,6 +4,7 @@ defined('ABSPATH') || exit;
 <!-- footer start ----------------------------------------->
 <footer class="footer bg">
   <div class="wrapper">
+    <p>※本サイトは架空の店舗を想定して制作したポートフォリオ作品です。実在する店舗ではありません。</p>
     <div class="logo">
       <a href="<?php echo esc_url(home_url()); ?> "> <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/imgs/dog_salon_logo.png" alt="Dog Salon Supica" /></a>
     </div>
