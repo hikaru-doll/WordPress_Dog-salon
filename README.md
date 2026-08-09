@@ -1,7 +1,7 @@
  # Dog Salon SUPICA
 
  ## DEMO
- (https://hikarudoll.xsrv.jp/dogsa/)
+🔗[Dog Salon SUPICA](https://hikarudoll.xsrv.jp/dogsa/)  
  ※ポートフォリオ用の架空サイトです。実在する店舗・サービスではありません。
  ## 使用技術
  HTML / CSS / JavaScript /PHP /　WordPress 
