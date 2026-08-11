@@ -73,6 +73,9 @@ Version: 1.0
     display: inline-block;
   }
 }
+.attention {
+  padding: var(--space-xxs);
+}
 /* -------------------
 header.php 
 ---------------------*/
