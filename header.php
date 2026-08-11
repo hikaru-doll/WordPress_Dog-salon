@@ -33,16 +33,6 @@ defined('ABSPATH') || exit;
       <span class="ham2"></span>
       <span class="ham3"></span>
     </button>
-    <nav id="main-navigation" class="main-navigation">
-      <ul class="nav-menu">
-        <li><a href="<?php echo esc_url(home_url()); ?>">Top</a></li>
-        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('menu'))); ?>">メニュー</a></li>
-        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>">ご予約</a></li>
-        <li><a href="<?php echo esc_url(home_url()); ?>/#access">アクセス</a></li>
-        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('policy'))); ?>">ご利用規約</a></li>
-        <li id="js-focus-trap" tabindex="0"></li>
-      </ul>
-    </nav>
     <ul class="information">
       <li><a href="tel:09000000000">電話：090-0000-0000</a></li>
       <!-- <li>電話：090-0000-0000</li> -->
@@ -53,6 +43,18 @@ defined('ABSPATH') || exit;
         </ul>
       </li>
     </ul>
+    <nav id="main-navigation" class="main-navigation">
+      <ul class="nav-menu">
+        <li><a href="<?php echo esc_url(home_url()); ?>">Top</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('menu'))); ?>">メニュー&料金</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>">ご予約</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('staff'))); ?>">スタッフ</a></li>
+        <li><a href="<?php echo esc_url(home_url()); ?>/#access">アクセス</a></li>
+        <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('policy'))); ?>">ご利用規約</a></li>
+        <li id="js-focus-trap" tabindex="0"></li>
+      </ul>
+    </nav>
+
   </header>
   <!-- /header end --------------------------------------------->
   <!-- /header end ------------------------------------------------------------------------------------>
