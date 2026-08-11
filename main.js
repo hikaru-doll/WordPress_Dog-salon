@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //2026年7月22日時点でのハンバーガーメニューの完成版
+  //ハンバーガーメニュー
   const ham = document.querySelector(".ham");
   const body = document.body;
   const navMenu = document.querySelector(".nav-menu");
