@@ -72,7 +72,9 @@
   .nav-menu {
     display: flex;
     justify-content: right;
-    margin-right: var(--space-m);
+    & a {
+      font-size: var(--title-h3);
+    }
   }
   .information {
     width: 350px;
