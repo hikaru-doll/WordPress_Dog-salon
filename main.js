@@ -1,42 +1,86 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+  //2026年7月22日時点でのハンバーガーメニューの完成版
   const ham = document.querySelector(".ham");
-  const menu = document.querySelector(".main-navigation");
-  function closeMenu() {
-    body.classList.remove("open");
-    ham.setAttribute("aria-expanded", "false");
-    ham.setAttribute("aria-label", "メニューを開く");
-    ham.focus();
-  }
+  const body = document.body;
+  const navMenu = document.querySelector(".nav-menu");
+
+  // フォーカス対象となるナビ内リンク（<li><a>のa要素）を取得
+  // 将来配列のメソッドを使う時を考慮して、配列にしておく（NodeListではなくて）
+  const navLinks = Array.from(navMenu.querySelectorAll("li > a"));
+
+  let isOpen = false;
+
   function openMenu() {
+    isOpen = true;
     body.classList.add("open");
     ham.setAttribute("aria-expanded", "true");
     ham.setAttribute("aria-label", "メニューを閉じる");
-  }
-  function toggleMenu() {
-    body.classList.contains("open") ? closeMenu() : openMenu();
-  }
 
-  // ハンバーガーメニューの開閉とaria属性の切り替え
-  ham.addEventListener("click", toggleMenu);
-
-  // 開いたmenuのクリック時でメニューの閉会とaria属性の切り替え
-  menu.addEventListener("click", closeMenu);
-
-  // ESCキーでメニューを閉じる
-  // 視覚上の状態だけでなくaria-expandedも同期する
-  const handleKeydown = (e) => {
-    if (e.key === "Escape") {
-      closeMenu();
+    // 開いたら先頭のliのリンクへフォーカス
+    if (navLinks.length > 0) {
+      navLinks[0].focus();
     }
-  };
-  document.addEventListener("keydown", handleKeydown);
+    document.addEventListener("keydown", handleKeydown);
+  }
+  function closeMenu() {
+    isOpen = false;
+    body.classList.remove("open");
+    ham.setAttribute("aria-expanded", "false");
+    ham.setAttribute("aria-label", "メニューを開く");
 
-  // ハンバーガーメニューOPEN時に、フォーカスが外れないようにする
-  const focusTrap = document.getElementById("js-focus-trap");
-  focusTrap.addEventListener("focus", (e) => {
+    document.removeEventListener("keydown", handleKeydown);
+
     ham.focus();
-  });
+  }
+
+  function toggleMenu() {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+  function handleKeydown(e) {
+    if (!isOpen) return;
+    // ESCキーで閉じる
+    if (e.key === "Escape" || e.key === "Esc") {
+      closeMenu();
+      return;
+    }
+
+    if (e.key !== "Tab") return;
+
+    const active = document.activeElement;
+    const lastLink = navLinks[navLinks.length - 1];
+    const firstLink = navLinks[0];
+
+    if (e.shiftKey) {
+      // Shift+Tab: .hamにいる時は最後のliへループ
+      if (active === ham) {
+        e.preventDefault();
+        lastLink.focus();
+      }
+      // 先頭リンクからShift+Tabで.hamへ戻るのは自然な挙動なのでそのまま
+      return;
+    }
+
+    // Tab: .hamにいる時は先頭のliへ
+    if (active === ham) {
+      e.preventDefault();
+      firstLink.focus();
+      return;
+    }
+
+    // Tab: 最後のliにいる時は.hamへループして戻る
+    if (active === lastLink) {
+      e.preventDefault();
+      ham.focus();
+      return;
+    }
+    // それ以外（li同士の移動）はブラウザ標準のTab移動に任せる
+  }
+
+  ham.addEventListener("click", toggleMenu);
 
   // コピーライトの西暦を動的に出力する
   const year = document.getElementById("year");

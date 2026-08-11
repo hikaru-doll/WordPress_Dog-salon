@@ -35,7 +35,6 @@ defined('ABSPATH') || exit;
     </button>
     <ul class="information">
       <li><a href="tel:09000000000">電話：090-0000-0000</a></li>
-      <!-- <li>電話：090-0000-0000</li> -->
       <li>
         <ul class="flex">
           <li>定休日：水曜日</li>
@@ -51,13 +50,11 @@ defined('ABSPATH') || exit;
         <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('staff'))); ?>">スタッフ</a></li>
         <li><a href="<?php echo esc_url(home_url()); ?>/#access">アクセス</a></li>
         <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('policy'))); ?>">ご利用規約</a></li>
-        <li id="js-focus-trap" tabindex="0"></li>
       </ul>
     </nav>
 
   </header>
   <!-- /header end --------------------------------------------->
-  <!-- /header end ------------------------------------------------------------------------------------>
   <!-- パンくずリスト -->
   <nav class="breadcrumb wrapper" aria-label="パンくず">
     <?php
