@@ -21,6 +21,7 @@ defined('ABSPATH') || exit;
       <p>Access</p>
       <div class="map">
         <iframe
+          title="アクセスの地図"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6551.821456199486!2d135.34491!3d34.80818775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f45d6ecc9fa3%3A0xfffca8c820285434!2z44CSNjY1LTA4NDUg5YW15bqr55yM5a6d5aGa5biC5qCE55S677yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1783137130602!5m2!1sja!2sjp"
           width="100%"
           height="250"
