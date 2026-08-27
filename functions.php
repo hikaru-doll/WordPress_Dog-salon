@@ -100,38 +100,6 @@ function insert_custom_structured_data()
       ]
     }
     </script>
-  <?php
-  }
-
-  // 2. 投稿ページ（ブログ・コラム）の場合（Article / BlogPosting）
-  elseif (is_single()) {
-    global $post;
-    // サムネイル画像（アイキャッチ）の取得
-    $thumbnail_id = get_post_thumbnail_id($post->ID);
-    $image_url = $thumbnail_id ? wp_get_attachment_image_url($thumbnail_id, 'full') : '【デフォルト画像のURL】';
-  ?>
-    <script type="application/ld-json">
-      {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": "<?php echo esc_js(get_the_title()); ?>",
-          "image": "<?php echo esc_url($image_url); ?>",
-          "datePublished": "<?php echo get_the_date('c'); ?>",
-          "dateModified": "<?php echo get_the_modified_date('c'); ?>",
-          "author": {
-            "@type": "Person",
-            "name": "<?php echo esc_js(get_the_author()); ?>"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "【ビジネス名・屋号】",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "【ロゴ画像のURL】"
-            }
-          }
-        }
-        </script>
 <?php
   }
 }
