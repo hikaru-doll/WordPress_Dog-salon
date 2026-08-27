@@ -62,3 +62,77 @@ add_action('admin_menu', 'remove_menus', 999);
 add_action('after_setup_theme', function () {
   add_theme_support('title-tag');
 });
+
+// 構造化データ
+function insert_custom_structured_data()
+{
+  // 1. トップページの場合
+  if (is_front_page() || is_home()) {
+?>
+    <script type="application/ld-json">
+      {
+      "@context": "https://schema.org",
+      "@type": "PetGrooming",
+      "name": "Dog Salon SUPICA",
+      "url": "<?php echo esc_url(home_url('/')); ?>",
+      "image": "【ロゴやメインビジュアルのURL】",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "兵庫県",
+        "addressLocality": "宝塚市",
+        "streetAddress": "子犬町0-0-0",
+        "addressCountry": "JP"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "9:00",
+          "closes": "20:00"
+        }
+      ]
+    }
+    </script>
+  <?php
+  }
+
+  // 2. 投稿ページ（ブログ・コラム）の場合（Article / BlogPosting）
+  elseif (is_single()) {
+    global $post;
+    // サムネイル画像（アイキャッチ）の取得
+    $thumbnail_id = get_post_thumbnail_id($post->ID);
+    $image_url = $thumbnail_id ? wp_get_attachment_image_url($thumbnail_id, 'full') : '【デフォルト画像のURL】';
+  ?>
+    <script type="application/ld-json">
+      {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "<?php echo esc_js(get_the_title()); ?>",
+          "image": "<?php echo esc_url($image_url); ?>",
+          "datePublished": "<?php echo get_the_date('c'); ?>",
+          "dateModified": "<?php echo get_the_modified_date('c'); ?>",
+          "author": {
+            "@type": "Person",
+            "name": "<?php echo esc_js(get_the_author()); ?>"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "【ビジネス名・屋号】",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "【ロゴ画像のURL】"
+            }
+          }
+        }
+        </script>
+<?php
+  }
+}
+add_action('wp_head', 'insert_custom_structured_data');
